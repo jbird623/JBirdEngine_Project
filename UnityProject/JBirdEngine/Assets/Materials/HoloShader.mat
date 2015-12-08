@@ -42,11 +42,11 @@ Material:
       data:
         first:
           name: _Lines
-        second: 70
+        second: 64
       data:
         first:
           name: _FlickerRate
-        second: 30
+        second: 50
       data:
         first:
           name: _FlcikerAlpha
@@ -58,15 +58,15 @@ Material:
       data:
         first:
           name: _FlickerAlpha
-        second: .0670000017
+        second: .0250000004
       data:
         first:
           name: _ScanLineTime
-        second: 1
+        second: 5
       data:
         first:
           name: _ScanLineSize
-        second: .150000006
+        second: .0500000007
       data:
         first:
           name: _ScanLineAlpha

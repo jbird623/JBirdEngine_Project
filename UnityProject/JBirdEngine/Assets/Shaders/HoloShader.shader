@@ -61,9 +61,9 @@
 			float B = saturate(2 - abs((_Hue / 360) * 6 - 4));
 			float3 hueRGB = float3(R,G,B);
 			float4 endColor = float4(((hueRGB - 1) * s + 1) * v, _Alpha);
-			o.Albedo = endColor.rgb; //* saturate(sign(-abs(IN.uv_HoloTex.y - fmod(_Time.y * _ScanLineTime, 1)) + _ScanLineSize / 2));
+			o.Albedo = endColor.rgb;// * saturate(sign(-abs(IN.uv_HoloTex.y - fmod(_Time.y / _ScanLineTime, 1)) + _ScanLineSize / 2));
 			o.Smoothness = 1;
-			o.Alpha = saturate(_Alpha + _FlickerAlpha * sin(_Time.y * _FlickerRate) + saturate(_ScanLineAlpha * sign(-abs(IN.uv_HoloTex.y - fmod(_Time.y * _ScanLineTime, 1)) + _ScanLineSize / 2)));
+			o.Alpha = saturate(_Alpha + _FlickerAlpha * sin(_Time.y * _FlickerRate) + saturate(_ScanLineAlpha * sign(-abs(IN.uv_HoloTex.y - fmod(_Time.y / _ScanLineTime, 1)) + _ScanLineSize / 2)));
 		}
 		ENDCG
 	} 
