@@ -30,7 +30,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0
+        second: .150000006
       data:
         first:
           name: _Hue
@@ -70,7 +70,7 @@ Material:
       data:
         first:
           name: _ScanLineAlpha
-        second: .100000001
+        second: .25
     m_Colors:
       data:
         first:

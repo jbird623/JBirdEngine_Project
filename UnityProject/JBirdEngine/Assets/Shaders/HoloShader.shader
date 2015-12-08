@@ -5,7 +5,8 @@
 		_HueShift ("Hue Shift Rate", Float) = 0
 		_Alpha ("Alpha", Range(0,1)) = 1
 		_HoloTex ("Albedo (RGB)", 2D) = "white" {}
-		//_Glossiness ("Smoothness", Range(0,1)) = 1
+		_Glossiness ("Smoothness", Range(0,1)) = 1
+		_Metallic ("Metallic", Range(0,1)) = 0
 		_Lines ("CRT Lines", Float) = 20
 		_FlickerRate ("Flicker Rate", Float) = 0.5
 		_FlickerAlpha ("Flicker Alpha", Range(0,1)) = 0.1
@@ -62,8 +63,9 @@
 			float3 hueRGB = float3(R,G,B);
 			float4 endColor = float4(((hueRGB - 1) * s + 1) * v, _Alpha);
 			o.Albedo = endColor.rgb;// * saturate(sign(-abs(IN.uv_HoloTex.y - fmod(_Time.y / _ScanLineTime, 1)) + _ScanLineSize / 2));
-			o.Smoothness = 1;
-			o.Alpha = saturate(_Alpha + _FlickerAlpha * sin(_Time.y * _FlickerRate) + saturate(_ScanLineAlpha * sign(-abs(IN.uv_HoloTex.y - fmod(_Time.y / _ScanLineTime, 1)) + _ScanLineSize / 2)));
+			o.Smoothness = _Glossiness;
+			o.Metallic = _Metallic;
+			o.Alpha = saturate(_Alpha + _FlickerAlpha * sin(_Time.y * _FlickerRate) + saturate(_ScanLineAlpha * sign(-abs(fmod(IN.uv_HoloTex.y - (_Time.y + 100) / _ScanLineTime, 1)) + _ScanLineSize)));
 		}
 		ENDCG
 	} 
