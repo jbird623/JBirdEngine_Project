@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: HoloShader
+  m_Name: HoloMat
   m_Shader: {fileID: 4800000, guid: 96fcbc3dcaac4a54ebbe3d196770f59e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3010
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -26,19 +26,19 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 1
+        second: .5
       data:
         first:
           name: _Metallic
-        second: .150000006
+        second: .291999996
       data:
         first:
           name: _Hue
-        second: 160
+        second: 180
       data:
         first:
           name: _Alpha
-        second: .518999994
+        second: .5
       data:
         first:
           name: _Lines
@@ -58,19 +58,31 @@ Material:
       data:
         first:
           name: _FlickerAlpha
-        second: .0250000004
+        second: .0299999993
       data:
         first:
           name: _ScanLineTime
-        second: 5
+        second: 2
       data:
         first:
           name: _ScanLineSize
-        second: .0500000007
+        second: .100000001
       data:
         first:
           name: _ScanLineAlpha
-        second: .25
+        second: .100000001
+      data:
+        first:
+          name: _CRT
+        second: 1
+      data:
+        first:
+          name: _CRTSize
+        second: 256
+      data:
+        first:
+          name: _CRTBrightness
+        second: 1
     m_Colors:
       data:
         first:
