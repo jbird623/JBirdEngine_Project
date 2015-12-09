@@ -174,7 +174,7 @@ namespace JBirdEngine {
         public static T PopFront<T> (this List<T> list, bool hideWarnings = false) {
             if (list.Count == 0) {
                 if (!hideWarnings) {
-                    Debug.LogWarningFormat("List<{0}>.PopFront(): List is empty!", typeof(T));
+                    Debug.LogWarningFormat("List<{0}>.PopFront(): List is empty! Returning default {0}.", typeof(T));
                 }
                 return default(T);
             }
