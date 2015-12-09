@@ -28,20 +28,22 @@ namespace JBirdEngine {
 	/// </summary>
 	public static class Singleton {
 
-		/// <summary>
-		/// THERE CAN ONLY BE ONE (Makes sure there's only one of this class). For use in Awake();
-		/// </summary>
-		/// <param name="instance">This instance.</param>
-		/// <param name="singleton">Singleton variable.</param>
-		/// <typeparam name="T">Must inherit from Component.</typeparam>
-		public static void ManageSingleton<T> (T instance, ref T singleton) where T : Component {
-			if (singleton == null) {
-				singleton = instance;
-			}
-			else {
-				GameObject.Destroy(instance.gameObject);
-			}
-		}
+        /// <summary>
+        /// THERE CAN ONLY BE ONE (Makes sure there's only one of this class). For use in Awake();
+        /// </summary>
+        /// <param name="instance">This instance.</param>
+        /// <param name="singleton">Singleton variable.</param>
+        /// <typeparam name="T">Must inherit from Component.</typeparam>
+        public static void ManageSingleton<T> (T instance, ref T singleton) where T : Component {
+            if (singleton == null) {
+                singleton = instance;
+            }
+            else {
+                if (Application.isPlaying) {
+                    GameObject.Destroy(instance.gameObject);
+                }
+            }
+        }
 
 	}
 
