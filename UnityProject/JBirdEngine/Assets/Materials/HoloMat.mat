@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: HoloMat
-  m_Shader: {fileID: 4800000, guid: 96fcbc3dcaac4a54ebbe3d196770f59e, type: 3}
+  m_Shader: {fileID: 4800000, guid: e157e8bbb15177248a3db74444c15d21, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: 3010
@@ -37,6 +37,10 @@ Material:
         second: 180
       data:
         first:
+          name: _HueShift
+        second: 0
+      data:
+        first:
           name: _Alpha
         second: .5
       data:
@@ -47,14 +51,6 @@ Material:
         first:
           name: _FlickerRate
         second: 50
-      data:
-        first:
-          name: _FlcikerAlpha
-        second: 1
-      data:
-        first:
-          name: _HueShift
-        second: 0
       data:
         first:
           name: _FlickerAlpha
@@ -73,7 +69,7 @@ Material:
         second: .100000001
       data:
         first:
-          name: _CRT
+          name: _CRTBrightness
         second: 1
       data:
         first:
@@ -81,7 +77,11 @@ Material:
         second: 256
       data:
         first:
-          name: _CRTBrightness
+          name: _FlcikerAlpha
+        second: 1
+      data:
+        first:
+          name: _CRT
         second: 1
     m_Colors:
       data:

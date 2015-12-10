@@ -10,7 +10,7 @@ public class ThrowErrors : MonoBehaviour {
         Debug.LogError("This error message doesn't actually indicate any errors, it just wants attention.");
         Debug.LogWarning("No one actually likes you. I'm sorry. Do you want a hug?");
         Debug.LogWarning("Everyone knows your secret. Run.");
-        Debug.LogError("I'm out of witty error messages.");
+        Debug.LogError("I'm out of witty error messages help.");
     }
 
 }
