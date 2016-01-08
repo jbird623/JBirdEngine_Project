@@ -151,13 +151,17 @@ namespace JBirdEngine {
                 if (mode == HeuristicMode.manhattan) {
                     return ((Mathf.Abs(end.x - start.x) + Mathf.Abs(end.y - start.y) + Mathf.Abs(end.z - start.z)));
                 }
-				#if HEXAGONAL
+
                 if (mode == HeuristicMode.hexagonal) {
+					#if HEXAGONAL
                     return (Mathf.Abs(Vector3.Dot(end - start, Hexagonal.HexGrid.cornerUpRight)) * Vector3.Distance(end, start) +
                             Mathf.Abs(Vector3.Dot(end - start, Hexagonal.HexGrid.cornerDownRight)) * Vector3.Distance(end, start) +
                             Mathf.Abs(Vector3.Dot(end - start, Hexagonal.HexGrid.cornerLeft)) * Vector3.Distance(end, start)) / 2f;
+					#else
+					Debug.LogError("JBirdAI: Trying to use hexagonal heuristic, but HEXAGONAL is not defined in the JBirdAI script.");
+					return 0f;
+					#endif
                 }
-				#endif
                 else {
                     Debug.LogError("JBirdEngine.AIHelper: Attempting to use unimplemented Heuristic Mode!");
                     return 0f;

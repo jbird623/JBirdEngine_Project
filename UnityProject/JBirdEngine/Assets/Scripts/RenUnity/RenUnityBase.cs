@@ -4,6 +4,28 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
 
+// TODO:
+// Add library of story branches
+// Add library of characters
+// Add button to check for parsing errors
+//    Verify Characters (speaking/entrance/exit)
+//    Verify Moods
+//    Verify Jumps
+//    Verify Stats (set/check)
+// Add actual decoding of story branches into UI
+//    GoToNextLine
+//    ChooseOption
+// Add "none" keyword for not jumping to a new branch
+// Add ability to add multiple commands in story branches
+// Add name of character speaking (#[name]:)
+// Add character moods/portraits (#mood [name] [mood]:)
+// Add character entrances/exits (#enter [name] (location):/#exit [name] (location):) - default to center
+// Add character stats changing (#stat [name] [stat] [n]:) - also for option consequence
+// Add backgrounds (#bg [image]:)
+// Add fade (#fade [seconds]:) - also for option consequences
+// Add if statements to options (#if [stat] [n]:) - only for option consequence
+// Add if statements to branching (#if [stat] [n] [jumpTo]: #jump [defaultJumpTo]) - also for option consequence, otherwise happens immediately
+
 namespace JBirdEngine {
 
 	namespace RenUnity {
@@ -71,8 +93,8 @@ namespace JBirdEngine {
 
 			[XmlAttribute("Text")]
 			public string text;
-			[XmlAttribute("JumpTo")]
-			public string jumpTo;
+			[XmlAttribute("Consequence")]
+			public string consequence;
 
 		}
 

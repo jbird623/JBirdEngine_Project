@@ -313,6 +313,10 @@ namespace JBirdEngine {
         /// </summary>
         public static class ColorHelper {
 
+			/// <summary>
+			/// A color that uses HSV instead of RGB. Can be converted to RGB using ToColor().
+			/// </summary>
+			[System.Serializable]
             public class ColorHSV {
 
                 public float h;
@@ -366,6 +370,22 @@ namespace JBirdEngine {
                 }
 
             }
+
+			/// <summary>
+			/// Contains both a color and an HSV color. Can be used to easily convert via inspector if using JBirdEditor.
+			/// </summary>
+			[System.Serializable]
+			public class ColorHSVRGB {
+
+				public Color rgb;
+				public ColorHSV hsv;
+
+				public ColorHSVRGB () {
+					hsv = new ColorHSV();
+					rgb = new Color();
+				}
+
+			}
 
             /// <summary>
             /// Converts a Color to the ColorHSV class.

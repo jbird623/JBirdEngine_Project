@@ -208,10 +208,10 @@ namespace JBirdEngine {
                 mesh.triangles = new int[] { 0, 1, 6, 7, 6, 1, 1, 2, 7, 8, 7, 2, 2, 3, 8, 9, 8, 3, 3, 4, 9, 10, 9, 4, 4, 5, 10, 11, 10, 5, 5, 0, 11, 6, 11, 0 };
                 mesh.RecalculateNormals();
                 mesh.RecalculateBounds();
-#if UNITY_EDITOR
+			#if UNITY_EDITOR
 			//AssetDatabase.CreateAsset(mesh, "Assets/Meshes/HexRingMesh.asset");
 			//AssetDatabase.SaveAssets();
-#endif
+			#endif
                 return mesh;
             }
 
