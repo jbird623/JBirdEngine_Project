@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f7b60af34d590499eee30db1b4e514, type: 3}
+  m_Name: New J Bird Color Palette
+  m_EditorClassIdentifier: 
+  colors:
+  - rgb: {r: .374632329, g: .426470578, b: .131704152, a: 1}
+    hsv:
+      h: 70.5517273
+      s: .691176474
+      v: .426470578
+      a: 1
+  - rgb: {r: .300940722, g: .426470578, b: .131704152, a: 1}
+    hsv:
+      h: 85.5517273
+      s: .691176474
+      v: .426470578
+      a: 1
+  - rgb: {r: .227249116, g: .426470578, b: .131704152, a: 1}
+    hsv:
+      h: 100.551727
+      s: .691176474
+      v: .426470578
+      a: 1
+  - rgb: {r: .153557509, g: .426470578, b: .131704152, a: 1}
+    hsv:
+      h: 115.551727
+      s: .691176474
+      v: .426470578
+      a: 1
+  - rgb: {r: .131704152, g: .426470578, b: .183542401, a: 1}
+    hsv:
+      h: 130.551727
+      s: .691176474
+      v: .426470578
+      a: 1

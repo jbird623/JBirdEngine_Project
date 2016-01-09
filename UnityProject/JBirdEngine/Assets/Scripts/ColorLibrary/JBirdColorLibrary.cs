@@ -404,13 +404,13 @@ namespace JBirdEngine {
                     hue = 0f;
                 }
                 else if (cMax == color.r) {
-                    hue = ((color.g - color.b) % 6) / delta;
+                    hue = ((color.g - color.b)) / delta;
                 }
                 else if (cMax == color.g) {
-                    hue = ((color.b - color.r) + 2) / delta;
+                    hue = 2 + (color.b - color.r) / delta;
                 }
                 else {
-                    hue = ((color.r - color.g) + 4) / delta;
+                    hue = 4 + (color.r - color.g) / delta;
                 }
                 //Convert to degrees
                 hue *= 60f;
@@ -638,7 +638,7 @@ namespace JBirdEngine {
             /// <param name="degrees">Degrees to shift the hue.</param>
             public static ColorHSV ShiftHue (this ColorHSV startColor, float degrees) {
                 float hue = startColor.h;
-                hue += degrees;
+				hue += degrees;
                 if (hue > 360f) {
                     hue -= 360f;
                 }
