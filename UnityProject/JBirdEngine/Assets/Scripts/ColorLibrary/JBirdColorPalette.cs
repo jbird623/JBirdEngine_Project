@@ -37,7 +37,7 @@ namespace JBirdEngine {
 				colors = new List<ColorHelper.ColorHSVRGB>();
 				for (int i = 0; i < 5; i++) {
 					colors.Add(new ColorHelper.ColorHSVRGB());
-					colors[i].rgb = Color.blue;
+					colors[i].rgb = Color.black;
 					colors[i].hsv = colors[i].rgb.ToHSV();
 				}
 			}
