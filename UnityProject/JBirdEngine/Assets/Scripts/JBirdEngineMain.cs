@@ -187,4 +187,37 @@ namespace JBirdEngine {
 
 	}
 
+	/// <summary>
+	/// Contains helper functions for char type.
+	/// </summary>
+	public static class CharHelper {
+
+		/// <summary>
+		/// Capitalize the specified char (must be alphabetical).
+		/// </summary>
+		public static char Capitalize (this char c) {
+			int i = (int)c;
+			if (97 <= i && i <= 122) {
+				return (char)(i - 32);
+			}
+			else {
+				return c;
+			}
+		}
+
+		/// <summary>
+		/// Lowercase the specified char (must be alphabetical).
+		/// </summary>
+		public static char Lowercase (this char c) {
+			int i = (int)c;
+			if (65 <= i && i <= 90) {
+				return (char)(i + 32);
+			}
+			else {
+				return c;
+			}
+		}
+
+	}
+	
 }
