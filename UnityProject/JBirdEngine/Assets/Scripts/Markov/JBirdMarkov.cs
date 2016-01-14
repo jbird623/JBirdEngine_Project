@@ -136,7 +136,7 @@ namespace JBirdEngine {
 		public class NameGenerator {
 			
 			public List<string> baseNames;
-			List<NameChain> chains;
+			public List<NameChain> chains;
 			public List<string> savedNames;
 
 			/// <summary>
