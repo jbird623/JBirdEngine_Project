@@ -115,30 +115,37 @@ namespace JBirdEngine {
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Monochromatic")) {
 					Monochromatic();
+					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Analogous")) {
 					Analogous();
+					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Accented Analogous")) {
 					AnalogousAccent();
+					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Complementary")) {
 					Complementary();
+					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Triad")) {
 					Triad();
+					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Compound")) {
 					Compound();
+					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Reverse Compound")) {
 					ReverseCompound();
+					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				foreach (ColorHelper.ColorHSVRGB color in targetPalette.colors) {
