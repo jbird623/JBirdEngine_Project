@@ -23,13 +23,13 @@ public class NameGeneratorEditor : Editor {
 			targetNameGen.nameGenerator.AddName(newName);
 			removeAll = false;
 			clearSave = false;
-			AssetDatabase.SaveAssets();
+			EditorUtility.SetDirty(target);
 		}
 		if (GUILayout.Button("Remove Name")) {
 			targetNameGen.nameGenerator.RemoveName(newName);
 			removeAll = false;
 			clearSave = false;
-			AssetDatabase.SaveAssets();
+			EditorUtility.SetDirty(target);
 		}
 		GUILayout.Space(15f);
 		minLength = EditorGUILayout.IntField("Minimum Length:", minLength);
@@ -43,7 +43,7 @@ public class NameGeneratorEditor : Editor {
 		if (GUILayout.Button("Save Output")) {
 			if (outputName != "") {
 				targetNameGen.nameGenerator.SaveName(outputName);
-				AssetDatabase.SaveAssets();
+				EditorUtility.SetDirty(target);
 			}
 			else {
 				Debug.LogWarning("NameGeneratorEditor: Output field is empty!");
@@ -63,7 +63,7 @@ public class NameGeneratorEditor : Editor {
 				targetNameGen.nameGenerator.RemoveAllNames();
 				removeAll = false;
 				clearSave = false;
-				AssetDatabase.SaveAssets();
+				EditorUtility.SetDirty(target);
 			}
 		}
 		if (!clearSave) {
@@ -77,7 +77,7 @@ public class NameGeneratorEditor : Editor {
 				targetNameGen.nameGenerator.ClearSavedNames();
 				removeAll = false;
 				clearSave = false;
-				AssetDatabase.SaveAssets();
+				EditorUtility.SetDirty(target);
 			}
 		}
 		GUILayout.Space(30f);
