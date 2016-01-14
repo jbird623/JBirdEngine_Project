@@ -137,6 +137,7 @@ namespace JBirdEngine {
 			
 			public List<string> baseNames;
 			List<NameChain> chains;
+			public List<string> savedNames;
 
 			/// <summary>
 			/// Initializer.
@@ -271,6 +272,20 @@ namespace JBirdEngine {
 				else {
 					return GenerateName(minLength, maxLength, first, second);
 				}
+			}
+
+			/// <summary>
+			/// Saves a generated name (called by editor).
+			/// </summary>
+			public void SaveName (string name) {
+				savedNames.Add(name);
+			}
+
+			/// <summary>
+			/// Clears all saved names.
+			/// </summary>
+			public void ClearSavedNames () {
+				savedNames.Clear();
 			}
 			
 		}

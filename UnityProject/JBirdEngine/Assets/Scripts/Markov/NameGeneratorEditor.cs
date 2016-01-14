@@ -14,6 +14,7 @@ public class NameGeneratorEditor : Editor {
 	int minLength = 3;
 	int maxLength = 10;
 	bool removeAll = false;
+	bool clearSave = false;
 
 	public override void OnInspectorGUI () {
 		targetNameGen = (JBirdNameGenerator)target;
@@ -21,10 +22,12 @@ public class NameGeneratorEditor : Editor {
 		if (GUILayout.Button("Add Name")) {
 			targetNameGen.nameGenerator.AddName(newName);
 			removeAll = false;
+			clearSave = false;
 		}
 		if (GUILayout.Button("Remove Name")) {
 			targetNameGen.nameGenerator.RemoveName(newName);
 			removeAll = false;
+			clearSave = false;
 		}
 		GUILayout.Space(15f);
 		minLength = EditorGUILayout.IntField("Minimum Length:", minLength);
@@ -32,17 +35,44 @@ public class NameGeneratorEditor : Editor {
 		if (GUILayout.Button("Generate!")) {
 			outputName = targetNameGen.nameGenerator.GenerateName(minLength, maxLength);
 			removeAll = false;
+			clearSave = false;
 		}
 		EditorGUILayout.TextField("Output:", outputName);
+		if (GUILayout.Button("Save Output")) {
+			if (outputName != "") {
+				targetNameGen.nameGenerator.SaveName(outputName);
+			}
+			else {
+				Debug.LogWarning("NameGeneratorEditor: Output field is empty!");
+			}
+			removeAll = false;
+			clearSave = false;
+		}
 		GUILayout.Space (15f);
 		if (!removeAll) {
 			if (GUILayout.Button("Remove All Names")) {
 				removeAll = true;
+				clearSave = false;
 			}
 		}
 		if (removeAll) {
 			if (GUILayout.Button("Click again to confirm.")) {
 				targetNameGen.nameGenerator.RemoveAllNames();
+				removeAll = false;
+				clearSave = false;
+			}
+		}
+		if (!clearSave) {
+			if (GUILayout.Button("Clear Saved Names")) {
+				removeAll = false;
+				clearSave = true;
+			}
+		}
+		if (clearSave) {
+			if (GUILayout.Button("Click again to confirm.")) {
+				targetNameGen.nameGenerator.ClearSavedNames();
+				removeAll = false;
+				clearSave = false;
 			}
 		}
 		GUILayout.Space(30f);
