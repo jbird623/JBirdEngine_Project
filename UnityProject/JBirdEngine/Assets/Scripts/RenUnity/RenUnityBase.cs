@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
+using System.Text;
 
 // TODO:
 // Add library of story branches
@@ -51,10 +52,6 @@ namespace JBirdEngine {
 			public void AddDialogueObject () {
 				script.Add(new DialogueObject());
 			}
-			
-			public void AddOptionObject () {
-				script.Add(new DialogueObject(2));
-			}
 
 		}
 
@@ -67,41 +64,20 @@ namespace JBirdEngine {
 			[XmlAttribute("Text")]
 			public string text;
 
-			[SerializeField]
-			[XmlArray("Options")]
-			[XmlArrayItem("Option")]
-			public List<JumpOption> options;
+            public DialogueObject () {
+                text = "";
+            }
 
-			public DialogueObject () {
-				options = new List<JumpOption>();
+			public DialogueObject (string str) {
+                text = str;
 			}
-
-			public DialogueObject (int opt) {
-				options = new List<JumpOption>();
-				for (int i = 0; i < opt; ++i) {
-					options.Add(new JumpOption());
-				}
-			}
-
-		}
-
-		/// <summary>
-		/// Jump option class.
-		/// </summary>
-		[System.Serializable]
-		public class JumpOption {
-
-			[XmlAttribute("Text")]
-			public string text;
-			[XmlAttribute("Consequence")]
-			public string consequence;
 
 		}
 
 		/// <summary>
 		/// Used to serialize Story Branches as XML files.
 		/// </summary>
-		public static class StoryBranchSerializer {
+		public static class StoryBranchXmlSerializer {
 
 			/// <summary>
 			/// Read the specified XML file and create a Story Branch from the data.
@@ -129,6 +105,26 @@ namespace JBirdEngine {
 			}
 
 		}
+
+        public static class StoryBranchJsonSerializer {
+
+            public static Branch Read (TextAsset file) {
+                Branch newBranch = new Branch();
+                using (StringReader reader = new StringReader(file.text)) {
+                    string json = reader.ReadToEnd();
+                    newBranch = JsonUtility.FromJson<Branch>(json);
+                }
+                return newBranch;
+            }
+
+            public static void Write (string fileName, Branch branch) {
+                string json = JsonUtility.ToJson(branch, true);
+                using (FileStream writer = new FileStream(fileName, FileMode.OpenOrCreate)) {
+                    writer.Write(Encoding.UTF8.GetBytes(json), 0, Encoding.UTF8.GetByteCount(json));
+                }
+            }
+
+        }
 
 	}
 

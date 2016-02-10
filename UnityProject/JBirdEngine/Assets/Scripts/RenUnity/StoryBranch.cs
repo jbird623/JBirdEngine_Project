@@ -13,10 +13,6 @@ namespace JBirdEngine {
 			public void AddDialogueObject () {
 				storyBranch.AddDialogueObject();
 			}
-
-			public void AddOptionObject () {
-				storyBranch.AddOptionObject();
-			}
 			
 		}
 

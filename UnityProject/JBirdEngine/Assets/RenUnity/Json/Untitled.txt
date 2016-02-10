@@ -1,0 +1,17 @@
+{
+    "branchName": "ExampleBranch",
+    "script": [
+        {
+            "text": "This is a simple test story branch."
+        },
+        {
+            "text": "This is another block of text (I changed it)."
+        },
+        {
+            "text": "And now an example of diffent options:"
+        },
+        {
+            "text": "This dialogue should never be reached, because it branches before this."
+        }
+    ]
+}
