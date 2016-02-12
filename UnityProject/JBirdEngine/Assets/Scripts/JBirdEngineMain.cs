@@ -118,6 +118,42 @@ namespace JBirdEngine {
 			return (Convert.ToInt32(flag) & Convert.ToInt32(checkFor)) == Convert.ToInt32(checkFor);
 		}
 
+        /// <summary>
+        /// Attempts to convert a string value to an enum value of the given type. Returns boolean based on success.
+        /// </summary>
+        /// <typeparam name="T">Enum type to convert to.</typeparam>
+        /// <param name="value">String to convert.</param>
+        /// <param name="returnEnum">Enum created from string.</param>
+        /// <returns>True if the enum can be parsed from the string, false otherwise.</returns>
+        public static bool TryParse<T> (string value, out T returnEnum) where T : IConvertible, IFormattable, IComparable {
+            if (!typeof(T).IsEnum) {
+                throw new ArgumentException("TryParse<T>(): 'T' must be of type 'enum'");
+            }
+            returnEnum = default(T);
+            if (Enum.IsDefined(typeof(T), value)) {
+                returnEnum = (T)Enum.Parse(typeof(T), value);
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Attempts to convert a string value to an enum value of the given type. Returns default on failure.
+        /// </summary>
+        /// <typeparam name="T">Enum type to convert to.</typeparam>
+        /// <param name="value">String to convert.</param>
+        /// <returns>Enum value from string, or default if TryParse fails.</returns>
+        public static T ToEnum<T> (this string value) where T : IConvertible, IFormattable, IComparable {
+            if (!typeof(T).IsEnum) {
+                throw new ArgumentException("ToEnum<T>(): 'T' must be of type 'enum'");
+            }
+            T enumValue;
+            if (!TryParse<T>(value, out enumValue)) {
+                Debug.LogErrorFormat("ToEnum<{0}>(): Value '{1}' does not exist within {0}.", typeof(T), value);
+            }
+            return enumValue;
+        }
+
 	}
 
 	/// <summary>

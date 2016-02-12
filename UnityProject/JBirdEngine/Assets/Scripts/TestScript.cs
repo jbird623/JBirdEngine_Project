@@ -8,9 +8,14 @@ public class TestScript : MonoBehaviour {
 	public JBirdEngine.ColorLibrary.ColorHelper.ColorHSV hsv;
 	public Markov.NameGenerator nameGenerator;
 
+    enum TestEnum {
+        ohgeezrick,
+        thisisatest,
+    }
+
 	void Start () {
 		JBirdEngine.AI.AIHelper.GetHeuristic(Vector3.zero, Vector3.one, JBirdEngine.AI.AIHelper.HeuristicMode.hexagonal);
-		Debug.Log ((int)'Z');
+        "thisisatest".ToEnum<TestEnum>();
 	}
 
 }
