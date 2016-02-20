@@ -18,6 +18,10 @@ namespace JBirdEngine {
 			Color baseColor = Color.black;
 			JBirdColorPalette targetPalette;
 
+			void AddToUndoStack () {
+				Undo.RecordObject(targetPalette, "JBirdColorPalette_ModifyColors");
+			}
+
 			void Analogous () {
 				for (int i = 0; i < 5; i++) {
 					targetPalette.colors[i].rgb = baseColor.ToHSV().ShiftHue(15 * (i - 2)).ToColor();
@@ -114,36 +118,43 @@ namespace JBirdEngine {
 				baseColor = EditorGUILayout.ColorField("Base Color", baseColor);
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Monochromatic")) {
+					AddToUndoStack();
 					Monochromatic();
 					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Analogous")) {
+					AddToUndoStack();
 					Analogous();
 					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Accented Analogous")) {
+					AddToUndoStack();
 					AnalogousAccent();
 					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Complementary")) {
+					AddToUndoStack();
 					Complementary();
 					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Triad")) {
+					AddToUndoStack();
 					Triad();
 					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Compound")) {
+					AddToUndoStack();
 					Compound();
 					EditorUtility.SetDirty(target);
 				}
 				EditorGUILayout.Space();
 				if (GUILayout.Button("Reverse Compound")) {
+					AddToUndoStack();
 					ReverseCompound();
 					EditorUtility.SetDirty(target);
 				}

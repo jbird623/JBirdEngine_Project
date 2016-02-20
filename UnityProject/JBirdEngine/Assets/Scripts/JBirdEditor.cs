@@ -15,12 +15,12 @@ namespace JBirdEngine {
 	namespace EditorHelper {
 
 		/// <summary>
-		/// Read only attribute (for greying out in inspector).
+		/// View only attribute (for greying out in inspector).
 		/// </summary>
-		public class ReadOnlyAttribute : PropertyAttribute { }
+		public class ViewOnlyAttribute : PropertyAttribute { }
 
 		#if UNITY_EDITOR
-		[CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
+		[CustomPropertyDrawer(typeof(ViewOnlyAttribute))]
 		public class ReadOnlyDrawer : PropertyDrawer {
 			public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {
 				return EditorGUI.GetPropertyHeight(property, label, true);
