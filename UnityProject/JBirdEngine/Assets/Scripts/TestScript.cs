@@ -8,6 +8,8 @@ public class TestScript : MonoBehaviour {
 	public JBirdEngine.ColorLibrary.ColorHelper.ColorHSV hsv;
 	public Markov.NameGenerator nameGenerator;
 
+	public JBirdEngine.ColorLibrary.MoreColors.BobRoss.ColorPalette bobRoss;
+
     enum TestEnum {
         ohgeezrick,
         thisisatest,
