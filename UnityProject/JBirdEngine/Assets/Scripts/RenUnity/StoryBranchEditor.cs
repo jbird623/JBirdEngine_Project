@@ -22,11 +22,6 @@ namespace JBirdEngine {
 				StoryBranch editorTarget = (StoryBranch)target;
 
 				GUILayout.Space(16);
-				if (GUILayout.Button("Add Dialogue")) {
-					editorTarget.AddDialogueObject();
-				}
-
-				GUILayout.Space(16);
 				if (GUILayout.Button("Read From File")) {
 					editorTarget.storyBranch = StoryBranchJsonSerializer.Read(readFile);
 				}

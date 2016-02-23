@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using JBirdEngine;
+using JBirdEngine.RenUnity;
 
 public class TestScript : MonoBehaviour {
 
@@ -18,6 +20,8 @@ public class TestScript : MonoBehaviour {
 	void Start () {
 		JBirdEngine.AI.AIHelper.GetHeuristic(Vector3.zero, Vector3.one, JBirdEngine.AI.AIHelper.HeuristicMode.hexagonal);
         "thisisatest".ToEnum<TestEnum>();
+		DialogueParser.CommandInfo info = DialogueParser.ParseLine("/option if stat JohnCena Suspicion != 7 \"this is a message\" if flag butts 7 3");
+		Debug.Log(info);
 	}
 
 }

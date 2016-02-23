@@ -10,10 +10,6 @@ namespace JBirdEngine {
 			
 			public Branch storyBranch;
 			
-			public void AddDialogueObject () {
-				storyBranch.AddDialogueObject();
-			}
-			
 		}
 
 	}
