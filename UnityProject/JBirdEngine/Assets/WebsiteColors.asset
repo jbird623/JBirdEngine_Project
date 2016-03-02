@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f7b60af34d590499eee30db1b4e514, type: 3}
+  m_Name: WebsiteColors
+  m_EditorClassIdentifier: 
+  colors:
+  - rgb: {r: 0.854902, g: 0.8705883, b: 0.9490197, a: 1}
+    hsv:
+      h: 230
+      s: 0.09917354
+      v: 0.9490197
+      a: 1
+  - rgb: {r: 0.058823533, g: 0.098039225, b: 0.29803923, a: 1}
+    hsv:
+      h: 230.16393
+      s: 0.8026316
+      v: 0.29803923
+      a: 1
+  - rgb: {r: 0.10980393, g: 0.6784314, b: 0.9215687, a: 1}
+    hsv:
+      h: 197.97101
+      s: 0.8808511
+      v: 0.9215687
+      a: 1
+  - rgb: {r: 0.9490197, g: 0.7137255, b: 0.5686275, a: 1}
+    hsv:
+      h: 22.886595
+      s: 0.40082645
+      v: 0.9490197
+      a: 1
+  - rgb: {r: 0.9490197, g: 0.45098042, b: 0.28235295, a: 1}
+    hsv:
+      h: 15.17647
+      s: 0.70247936
+      v: 0.9490197
+      a: 1
+  - rgb: {r: 0.47685987, g: 0.79180455, b: 0.9264706, a: 1}
+    hsv:
+      h: 197.97101
+      s: 0.4852941
+      v: 0.9264706
+      a: 1
