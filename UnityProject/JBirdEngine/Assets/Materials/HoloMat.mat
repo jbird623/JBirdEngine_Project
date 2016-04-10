@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: HoloMat
-  m_Shader: {fileID: 4800000, guid: 49e256ccb9832b74aa18d6174bfec771, type: 3}
+  m_Shader: {fileID: 4800000, guid: eda83d90ffbbdf74d9ca2624583d7e41, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 3010
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -108,6 +108,18 @@ Material:
         second: 1
       data:
         first:
+          name: _IndexRefract
+        second: 1.333
+      data:
+        first:
+          name: _Transparency
+        second: 0
+      data:
+        first:
+          name: _Hue
+        second: 180
+      data:
+        first:
           name: _Parallax
         second: 0.02
       data:
@@ -134,10 +146,6 @@ Material:
         first:
           name: _Mode
         second: 0
-      data:
-        first:
-          name: _Hue
-        second: 180
       data:
         first:
           name: _HueShift
@@ -186,14 +194,6 @@ Material:
         first:
           name: _CRT
         second: 1
-      data:
-        first:
-          name: _IndexRefract
-        second: 1.333
-      data:
-        first:
-          name: _Transparency
-        second: 0
     m_Colors:
       data:
         first:

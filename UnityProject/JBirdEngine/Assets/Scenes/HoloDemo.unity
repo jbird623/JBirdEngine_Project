@@ -626,11 +626,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1383571904}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dcc5b6c39dee3c48b90efe4eb549cef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d5b1ceb44285634bb8936bc8834e3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mode: 1
   pixelScale: 2
   checkering: 0.05
 --- !u!1 &1810249907
@@ -651,7 +652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1810249908
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -717,7 +718,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1810249907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d2fc15ab066e0d4fafb7d6b46c89d59, type: 3}
+  m_Script: {fileID: 11500000, guid: 19a99d731bad5e54382d1a211e2658d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 8400000, guid: d61e935442e164d44b367dfd33ffe7f7, type: 2}
