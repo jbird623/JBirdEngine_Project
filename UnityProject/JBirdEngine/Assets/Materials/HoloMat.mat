@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: HoloMat
-  m_Shader: {fileID: 4800000, guid: eda83d90ffbbdf74d9ca2624583d7e41, type: 3}
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 3010
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: ab4a15844ae89644d8a5b4c956b8fe13, type: 3}
+          m_Texture: {fileID: 2800000, guid: ace571f75fac80f41a9cd88d5ba46f59, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -100,23 +100,15 @@ Material:
         second: 0.5
       data:
         first:
-          name: _Mode
-        second: 0
-      data:
-        first:
-          name: _Glossiness
-        second: 1
-      data:
-        first:
-          name: _Metallic
-        second: 1
-      data:
-        first:
           name: _Parallax
         second: 0.02
       data:
         first:
           name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
         second: 1
       data:
         first:
@@ -136,16 +128,24 @@ Material:
         second: 0
       data:
         first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 1
+      data:
+        first:
+          name: _Hue
+        second: 180
+      data:
+        first:
           name: _IndexRefract
         second: 1.333
       data:
         first:
           name: _Transparency
         second: 0
-      data:
-        first:
-          name: _Hue
-        second: 180
       data:
         first:
           name: _HueShift
