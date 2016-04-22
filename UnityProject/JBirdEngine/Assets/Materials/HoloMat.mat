@@ -100,24 +100,16 @@ Material:
         second: 0.5
       data:
         first:
+          name: _Mode
+        second: 0
+      data:
+        first:
           name: _Glossiness
         second: 1
       data:
         first:
           name: _Metallic
         second: 1
-      data:
-        first:
-          name: _IndexRefract
-        second: 1.333
-      data:
-        first:
-          name: _Transparency
-        second: 0
-      data:
-        first:
-          name: _Hue
-        second: 180
       data:
         first:
           name: _Parallax
@@ -144,8 +136,16 @@ Material:
         second: 0
       data:
         first:
-          name: _Mode
+          name: _IndexRefract
+        second: 1.333
+      data:
+        first:
+          name: _Transparency
         second: 0
+      data:
+        first:
+          name: _Hue
+        second: 180
       data:
         first:
           name: _HueShift
@@ -202,7 +202,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0.15619595, g: 0.23882213, b: 0.78676474, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Color1
