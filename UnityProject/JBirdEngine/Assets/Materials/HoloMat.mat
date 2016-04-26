@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: ace571f75fac80f41a9cd88d5ba46f59, type: 3}
+          m_Texture: {fileID: 2800000, guid: ed5e38d61b2442f4cbae852df2d9acee, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -100,72 +100,12 @@ Material:
         second: 0.5
       data:
         first:
-          name: _Parallax
-        second: 0.02
-      data:
-        first:
-          name: _ZWrite
-        second: 1
-      data:
-        first:
-          name: _Glossiness
-        second: 1
-      data:
-        first:
-          name: _BumpScale
-        second: 1
-      data:
-        first:
-          name: _OcclusionStrength
-        second: 1
-      data:
-        first:
-          name: _DetailNormalMapScale
-        second: 1
-      data:
-        first:
-          name: _UVSec
-        second: 0
-      data:
-        first:
           name: _Mode
         second: 0
       data:
         first:
-          name: _Metallic
-        second: 1
-      data:
-        first:
-          name: _Hue
-        second: 180
-      data:
-        first:
-          name: _IndexRefract
-        second: 1.333
-      data:
-        first:
-          name: _Transparency
-        second: 0
-      data:
-        first:
-          name: _HueShift
-        second: 0
-      data:
-        first:
-          name: _Alpha
-        second: 0.5
-      data:
-        first:
           name: _Lines
         second: 64
-      data:
-        first:
-          name: _FlickerRate
-        second: 50
-      data:
-        first:
-          name: _FlickerAlpha
-        second: 0.03
       data:
         first:
           name: _ScanLineTime
@@ -188,6 +128,66 @@ Material:
         second: 256
       data:
         first:
+          name: _Parallax
+        second: 0.02
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: 0
+      data:
+        first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: 1
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _Hue
+        second: 180
+      data:
+        first:
+          name: _IndexRefract
+        second: 1.333
+      data:
+        first:
+          name: _Transparency
+        second: 0
+      data:
+        first:
+          name: _HueShift
+        second: 0
+      data:
+        first:
+          name: _Alpha
+        second: 0.5
+      data:
+        first:
+          name: _FlickerRate
+        second: 50
+      data:
+        first:
+          name: _FlickerAlpha
+        second: 0.03
+      data:
+        first:
           name: _FlcikerAlpha
         second: 1
       data:
@@ -202,7 +202,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0.11305147, g: 0.20157203, b: 0.375, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Color1
