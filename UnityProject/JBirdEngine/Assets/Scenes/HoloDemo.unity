@@ -160,29 +160,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
---- !u!117 &87366315
-Texture3D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  serializedVersion: 2
-  m_Width: 4
-  m_Height: 4
-  m_Depth: 4
-  m_Format: 5
-  m_MipCount: 3
-  m_DataSize: 292
-  m_TextureSettings:
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  image data: 292
-  _typelessdata: ff000000ff400000ff800000ffbf0000ff004000ff404000ff804000ffbf4000ff008000ff408000ff808000ffbf8000ff00bf00ff40bf00ff80bf00ffbfbf00ff000040ff400040ff800040ffbf0040ff004040ff404040ff804040ffbf4040ff008040ff408040ff808040ffbf8040ff00bf40ff40bf40ff80bf40ffbfbf40ff000080ff400080ff800080ffbf0080ff004080ff404080ff804080ffbf4080ff008080ff408080ff808080ffbf8080ff00bf80ff40bf80ff80bf80ffbfbf80ff0000bfff4000bfff8000bfffbf00bfff0040bfff4040bfff8040bfffbf40bfff0080bfff4080bfff8080bfffbf80bfff00bfbfff40bfbfff80bfbfffbfbfbfff202020ff9f2020ff209f20ff9f9f20ff20209fff9f209fff209f9fff9f9f9fff5f5f5f
 --- !u!1 &88739814
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +533,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!117 &1062695000
+Texture3D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  serializedVersion: 2
+  m_Width: 4
+  m_Height: 4
+  m_Depth: 4
+  m_Format: 5
+  m_MipCount: 3
+  m_DataSize: 292
+  m_TextureSettings:
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapMode: 0
+  image data: 292
+  _typelessdata: ff000000ff400000ff800000ffbf0000ff004000ff404000ff804000ffbf4000ff008000ff408000ff808000ffbf8000ff00bf00ff40bf00ff80bf00ffbfbf00ff000040ff400040ff800040ffbf0040ff004040ff404040ff804040ffbf4040ff008040ff408040ff808040ffbf8040ff00bf40ff40bf40ff80bf40ffbfbf40ff000080ff400080ff800080ffbf0080ff004080ff404080ff804080ffbf4080ff008080ff408080ff808080ffbf8080ff00bf80ff40bf80ff80bf80ffbfbf80ff0000bfff4000bfff8000bfffbf00bfff0040bfff4040bfff8040bfffbf40bfff0080bfff4080bfff8080bfffbf80bfff00bfbfff40bfbfff80bfbfffbfbfbfff202020ff9f2020ff209f20ff9f9f20ff20209fff9f209fff209f9fff9f9f9fff5f5f5f
 --- !u!1 &1383571904
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,23 +650,23 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1383571904}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d1de1f0f337e741a01d0311d60318c, type: 3}
+  m_Script: {fileID: 11500000, guid: 607e029703b8293468f5c08914b138bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 2
-  pixelScale: 5
+  mode: 0
+  pixelScale: 1
   checkering: 0.05
-  saturationCorrection: 0.324
+  saturationCorrection: 0
   JBirdPalette: {fileID: 0}
-  paletteTexture: {fileID: 87366315}
+  paletteTexture: {fileID: 1062695000}
   texSize: 4
   clampMode: 0
-  color1: {r: 0.015686275, g: 0.007843138, b: 0.015686275, a: 1}
-  color2: {r: 0.454902, g: 0.44705886, b: 0.454902, a: 1}
-  color3: {r: 0.7372549, g: 0.7294118, b: 0.7372549, a: 1}
-  color4: {r: 0.98823535, g: 0.9803922, b: 0.98823535, a: 1}
+  color1: {r: 0, g: 0, b: 0, a: 1}
+  color2: {r: 0.333, g: 0.333, b: 0.333, a: 1}
+  color3: {r: 0.667, g: 0.667, b: 0.667, a: 1}
+  color4: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1383571911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,20 +675,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1383571904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8cd5d9b5db56c4f97123597f95a8a4, type: 3}
+  m_Script: {fileID: 11500000, guid: d85ae2f92b2a76148b7f57f8ecbfe305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CRTLerp: 0
-  fisheyeMap: {fileID: 2800000, guid: 1e85f1f882bf3d04991b16527e598d91, type: 3}
+  CRTLerp: 1
+  fisheyeMap: {fileID: 2800000, guid: b2cda3cf595cd674da2978e49ce891f4, type: 3}
   fisheyeStrength: 0.05
-  CRTBrightness: 0.18
-  CRTSize: 256
-  CRTLines: 64
-  lineDarkness: -1.34
+  CRTBrightness: 0.2
+  CRTSize: 180
+  CRTLines: 90
+  lineDarkness: 0.1
   scanLineTime: 1.5
   scanLineAlpha: 0.1
-  scanLineSize: 0.262
-  staticFuzz: 0.25
+  scanLineSize: 0.25
+  staticFuzz: 0.2
 --- !u!1 &1810249907
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ccceec4b6937d46b165a96738e6c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
 --- !u!1 &2131891514
 GameObject:
   m_ObjectHideFlags: 0
